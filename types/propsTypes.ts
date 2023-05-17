@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 
 export interface ButtonState {
-  using: "menu" | "arrow_right" | "arrow_left" | "link" | "cancel" | "text" | "github";
+  using: "menu" | "link" | "cancel" | "text" | "github";
   icon? : Element
   text?: string;
   onClick: () => void | ((event: MouseEvent<HTMLButtonElement>) => void);
@@ -12,7 +12,6 @@ export interface BadgeState {
   name: string;
   shape: string | "square" | "one";
   onClick?: () => void | ((event: MouseEvent<HTMLDivElement>) => void);
-  onMouseEnter?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
 export interface ProjectDataState {

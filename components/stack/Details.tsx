@@ -1,4 +1,4 @@
-import Button from "@components/button/Button";
+import Button from "@components/Button";
 import style from "@styles/Stack.module.sass";
 
 const Details = ({

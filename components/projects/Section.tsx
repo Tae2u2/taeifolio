@@ -1,8 +1,6 @@
 import Image from "next/image";
-
-import Button from "@components/button/Button";
+import Button from "@components/Button";
 import { ProjectState } from "@@types/propsTypes";
-
 import style from "@styles/Project.module.sass";
 
 const Section = ({

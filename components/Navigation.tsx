@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useBooleanState } from "../hooks/useBooleanState";
-import Button from "./button/Button";
+import Button from "./Button";
 import style from "@styles/Navigation.module.sass";
 
 const Navigation = () => {

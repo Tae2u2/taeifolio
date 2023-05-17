@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-
 import Section from "./Section";
 import data from "./data/data.json";
 import { ProjectDataState } from "@@types/propsTypes";
 import { useBooleanState } from "@hooks/useBooleanState";
-
 import style from "@styles/Project.module.sass";
-import Button from "@components/button/Button";
+import Button from "@components/Button";
 
 const Project = () => {
   const [currentState, setCurrentState] = useState(1);

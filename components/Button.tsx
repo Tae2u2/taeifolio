@@ -2,8 +2,6 @@ import { ButtonState } from "@@types/propsTypes";
 
 import {
   TfiAlignJustify,
-  TfiArrowRight,
-  TfiArrowLeft,
   TfiClose,
   TfiArrowTopRight,
   TfiGithub,
