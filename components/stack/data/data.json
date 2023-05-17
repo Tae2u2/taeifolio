@@ -1,0 +1,11 @@
+[
+{ "name": "React", "shape": "square" },
+{ "name": "JavaScript", "shape": "square" },
+{ "name": "CSS3", "shape": "square" },
+{ "name": "NextJS", "shape": "one" },
+{ "name": "Redux", "shape": "one" },
+{ "name": "TypeScript", "shape": "one" },
+{ "name": "ES6", "shape": "one"},
+{ "name": "NodeJS", "shape": "one" },
+{ "name": "Sass", "shape": "one" },
+{ "name": "TailwindCSS", "shape": "one"}]

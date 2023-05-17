@@ -1,0 +1,22 @@
+[{
+    "id":1,
+    "name": "pig-ON-trip",
+    "title" : "해외여행 중 사용한 식비를 기록하는 서비스",
+    "imageSrc" : "",
+    "explain" : "여행 중인 사용자가 식비를 입력하면 한국돈으로 환전해서 기록해주는 서비스입니다.",
+    "period" : "2023.04",
+    "dev" : "React TailwindCSS gh-pages Git-action",
+    "link": "",
+    "github" : "https://github.com/roeehql/pig-on-trip"
+},
+{
+    "id":2,
+    "name": "Taeifolio",
+    "title" : "개인 소개 웹페이지",
+    "imageSrc" : "",
+    "explain" :"",
+    "period" : "2023.04",
+    "dev" : "NextJS TypeScript Sass gh-pages Git-action",
+    "link": "",
+    "github" : "https://github.com/roeehql/tae2Profile"
+}]

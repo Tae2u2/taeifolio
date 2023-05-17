@@ -1,0 +1,63 @@
+@use 'variables'
+
+.navigation
+    position: fixed
+    top: 0
+    left: 0
+    width: fit-content
+    height: fit-content
+    z-index: 10000
+    .menu
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        width: fit-content
+        height: fit-content
+        margin-top: 16px
+        border: 1px solid variables.$black
+        background-color: variables.$white
+        transform: translateX(57px)
+        z-index: 1000
+        transition: 0.4s
+        .menu_list
+            list-style: none
+            width: 100%
+            padding: 12px 24px 12px 16px
+            text-align: left
+            letter-spacing: -0.5px
+            font-family: sans-serif
+            cursor: pointer
+        .menu_list:hover
+            background-color: variables.$sky
+
+.darkmode
+    position: fixed
+    top: 0
+    right: 0
+    width: 80px
+    height: 40px
+    margin: 16px
+    border-radius: 40px
+    border: 1px solid variables.$black
+    z-index: 1000
+    cursor: pointer
+    .ball
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 34px
+        height: 34px
+        margin: 2px
+        border-radius: 50%
+        border: 1px solid variables.$white
+        background-color: variables.$black
+    .dark
+        background-color: variables.$white
+        animation: move-ball 0.4s linear forwards
+@keyframes move-ball
+    0%
+        transform: translateX(0px)
+    100%
+        transform: translateX(40px)
