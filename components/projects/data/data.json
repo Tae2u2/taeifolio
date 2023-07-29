@@ -1,22 +1,43 @@
 [{
     "id":1,
-    "name": "pig-ON-trip",
+    "name": "돼지는 여행 중",
     "title" : "해외여행 중 사용한 식비를 기록하는 서비스",
-    "imageSrc" : "",
+    "imageSrc" : "/pigOnTrip.png",
     "explain" : "여행 중인 사용자가 식비를 입력하면 한국돈으로 환전해서 기록해주는 서비스입니다.",
-    "period" : "2023.04",
-    "dev" : "React TailwindCSS gh-pages Git-action",
-    "link": "",
-    "github" : "https://github.com/roeehql/pig-on-trip"
+    "period" : "2023.07",
+    "dev" : "NextJS TypeScript TailwindCSS Git-actions",
+    "link": "https://roeehql.github.io/pigONtrip",
+    "github" : "https://github.com/roeehql/pigONtrip"
 },
 {
     "id":2,
-    "name": "Taeifolio",
-    "title" : "개인 소개 웹페이지",
-    "imageSrc" : "",
-    "explain" :"",
-    "period" : "2023.04",
-    "dev" : "NextJS TypeScript Sass gh-pages Git-action",
-    "link": "",
+    "name": "애견미용 예약 서비스",
+    "title" : "애견 미용 예약 서비스입니다.",
+    "imageSrc" : "/petSalonBooking.png",
+    "explain" :"예약과 예약확인 매장 조회 및 검색을 할 수 있는 애견 미용 예약 서비스입니다.",
+    "period" : "2023.06",
+    "dev" : "React TypeScript TailwindCSS ",
+    "link": "https://roeehql.github.io/petSalonBooking/",
+    "github" : "https://github.com/roeehql/petSalonBooking"
+},{
+    "id":3,
+    "name": "애견미용 예약 서비스(매장용)",
+    "title" : "매장용 애견 미용 예약 서비스입니다.",
+    "imageSrc" : "/petSalonAdmin.png",
+    "explain" :"예약 조회 및 예약승인 조건별 조회가 가능한 매장용 관리 서비스입니다.",
+    "period" : "2023.06",
+    "dev" : "NextJS TypeScript TailwindCSS",
+    "link": "https://pet-salon-admin.vercel.app/",
+    "github" : "https://github.com/roeehql/petSalonAdmin"
+},{
+    "id":4,
+    "name": "TAEIFOLIO",
+    "title" : "개인 포트폴리오 페이지 입니다.",
+    "imageSrc" : "/taeifolio.png",
+    "explain" :"지금 보고 계신 페이지입니다.",
+    "period" : "2023.06",
+    "dev" : "NextJS TypeScript Sass vercel",
+    "link": "https://taeifolio.vercel.app/",
     "github" : "https://github.com/roeehql/taeiProfile"
-}]
+}
+]

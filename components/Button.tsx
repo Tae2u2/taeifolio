@@ -1,5 +1,3 @@
-import { ButtonState } from "@@types/propsTypes";
-
 import {
   TfiAlignJustify,
   TfiClose,
@@ -8,15 +6,17 @@ import {
 } from "react-icons/tfi";
 import style from "@styles/Button.module.sass";
 
-const Button = ({ using, text, onClick, onMouseEnter }: ButtonState) => {
+interface ButtonState {
+  using: "menu" | "link" | "cancel" | "text" | "github";
+  text?: string;
+  onClick: () => void;
+}
+
+const Button = ({ using, text, onClick }: ButtonState) => {
   return (
     <>
       {using === "menu" && (
-        <button
-          className={style.menu_button}
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-        >
+        <button className={style.menu_button} onClick={onClick}>
           <TfiAlignJustify />
         </button>
       )}

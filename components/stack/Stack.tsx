@@ -1,16 +1,37 @@
-import Badge from "./Badge";
 import data from "./data/data.json";
-import { BadgeState } from "@@types/propsTypes";
+import { useBooleanState } from "@hooks/useBooleanState";
+import Badge from "./Badge";
+import Button from "@components/Button";
 
 import style from "@styles/Stack.module.sass";
 
 const Stack = () => {
-  const stackList: BadgeState[] = data;
+  const stackList: { name: string; shape: string }[] = data;
+  const {
+    isTrue: isSort,
+    setTrue: setSort,
+    setFalse: setUnSort,
+  } = useBooleanState();
+
   return (
-    <div className={style.stack_wrapper}>
+    <div
+      className={isSort ? `${style.sort_wrapper}` : `${style.stack_wrapper}`}
+    >
       {stackList.map((item) => (
-        <Badge key={item.name} shape={item.shape} name={item.name} />
+        <Badge
+          key={item.name}
+          shape={item.shape}
+          name={item.name}
+          sort={isSort}
+        />
       ))}
+      <div className={style.sort_button}>
+        <Button
+          using="text"
+          text={isSort ? "되돌리기" : "정렬하기"}
+          onClick={() => (isSort ? setUnSort() : setSort())}
+        />
+      </div>
     </div>
   );
 };

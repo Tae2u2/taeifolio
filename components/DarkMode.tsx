@@ -8,13 +8,13 @@ const DarkMode = ({
   handleDarkMode: () => void;
 }) => {
   return (
-    <div className={style.darkmode} onClick={() => handleDarkMode()}>
+    <button className={style.darkmode} onClick={() => handleDarkMode()}>
       <span
         className={isDark ? `${style.ball} ${style.dark}` : `${style.ball}`}
       >
         {isDark ? "🔅" : "🌙"}
       </span>
-    </div>
+    </button>
   );
 };
 

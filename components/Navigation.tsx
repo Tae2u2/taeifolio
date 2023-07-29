@@ -7,26 +7,25 @@ const Navigation = () => {
   const { isTrue, setTrue, setFalse } = useBooleanState();
 
   return (
-    <div className={style.navigation}>
+    <nav className={style.navigation}>
       <Button
         using={"menu"}
         onClick={() => (isTrue ? setFalse() : setTrue())}
-        onMouseEnter={() => setTrue()}
       />
-      {isTrue && (
-        <ul className={style.menu} onMouseLeave={() => setFalse()}>
-          <li className={style.menu_list}>
-            <Link href={"/"}>PROJECT</Link>
-          </li>
-          <li className={style.menu_list}>
-            <Link href={"/skill"}>SKILL</Link>
-          </li>
-          <li className={style.menu_list}>
-            <Link href={"/contact"}>CONTACT</Link>
-          </li>
+      {!isTrue && (
+        <ul className={style.menu}>
+          <Link href={"/"}>
+            <li className={style.menu_list}>PROJECT</li>
+          </Link>
+          <Link href={"/skill"}>
+            <li className={style.menu_list}>SKILL</li>
+          </Link>
+          <Link href={"/contact"}>
+            <li className={style.menu_list}>CONTACT</li>
+          </Link>
         </ul>
       )}
-    </div>
+    </nav>
   );
 };
 

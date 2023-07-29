@@ -18,8 +18,8 @@ $badge_count: 10
     transition: 0.5s
     @for $i from 0 through $badge_count
         &:nth-child(#{$i})
-            --bagde_left: #{random_range(0vw, 50vw)}
-            --bagde_top: #{random_range(10vh, 90vh)}
+            --bagde_left: #{random_range(5vw, 80vw)}
+            --bagde_top: #{random_range(10vh, 80vh)}
 
 .stack_wrapper
     display: flex
@@ -28,6 +28,10 @@ $badge_count: 10
     position: relative
     width: 100%
     height: 90vh
+    .sort_button
+        display: flex
+        justify-content: center
+        width: 100%
     .badge
         @extend %badge
         font-size: 2rem
@@ -36,7 +40,6 @@ $badge_count: 10
         background: rgb(172,216,255)
         background: linear-gradient(180deg, rgba(172,216,255,1) 0%, rgba(255,255,255,1) 100%)
         z-index: 100
-        cursor: pointer
     .note
         @extend %badge
         color: variables.$black
@@ -47,21 +50,12 @@ $badge_count: 10
         border-radius: 60% 40% 24% 76% / 39% 57% 43% 61%
     .note:hover
         box-shadow: 5px 5px 0px variables.$black
-    .detail_wrapper
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 100%
-        height: 100%
-        .detail_modal
-            display: flex
-            flex-direction: column
-            justify-content: flex-start
-            align-items: flex-start
-            width: 100%
-            height: 50%
-            padding: 12px 16px
-            border: 1px solid variables.$black
-            background: variables.$white
-            box-shadow: 3px 3px 0px variables.$black
-            z-index: 1000
+.sort_wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    .sort
+        padding: 12px 32px
+        border: 1px solid variables.$black
+        line-height: 2.5rem
+        letter-spacing: -1px
+        font-size: 1.5rem

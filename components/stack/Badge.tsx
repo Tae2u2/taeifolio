@@ -1,26 +1,19 @@
-import { BadgeState } from "@@types/propsTypes";
-import { useBooleanState } from "@hooks/useBooleanState";
 import style from "@styles/Stack.module.sass";
-import { useState } from "react";
-import Details from "./Details";
 
-const Badge = ({ shape, name }: BadgeState) => {
-  const { isTrue, setTrue, setFalse } = useBooleanState(false);
-  const [selectedSkillName, setSelectedSkillName] = useState("");
-  const handleBadgeClick = () => {
-    setSelectedSkillName(name);
-    setTrue();
-  };
+export interface BadgeState {
+  name: string;
+  shape: string | "square" | "one";
+  sort: boolean;
+}
+
+const Badge = ({ shape, name, sort }: BadgeState) => {
   return (
     <>
-      {shape === "one" && <div className={style.note}>{name}</div>}
-      {shape === "square" && (
-        <div className={style.badge} onClick={() => handleBadgeClick()}>
-          {name}
-        </div>
+      {shape === "one" && (
+        <div className={sort ? `${style.sort}` : `${style.note}`}>{name}</div>
       )}
-      {isTrue && (
-        <Details title={selectedSkillName} onClickCancel={() => setFalse()} />
+      {shape === "square" && (
+        <div className={sort ? `${style.sort}` : `${style.badge}`}>{name}</div>
       )}
     </>
   );

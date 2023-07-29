@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import Project from "@components/projects/Project";
+import dynamic from "next/dynamic";
+const Project = dynamic(() => import("@components/projects/Project"));
 
 const Home: NextPage = () => {
   return <Project />;

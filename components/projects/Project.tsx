@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Section from "./Section";
 import data from "./data/data.json";
-import { ProjectDataState } from "@@types/propsTypes";
+import { ProjectDataState } from "@@types/projectTypes";
 import { useBooleanState } from "@hooks/useBooleanState";
 import style from "@styles/Project.module.sass";
 import Button from "@components/Button";
@@ -12,12 +12,13 @@ const Project = () => {
   const [timer, setTimer] = useState(10);
   const {
     isTrue: isStop,
-    setTrue: setIsPlayTrue,
-    setFalse: setIsPlayFalse,
+    setTrue: setIsStopTrue,
+    setFalse: setIsStopFalse,
   } = useBooleanState();
 
-  const handleLinkClick = (link: string) => {
-    window.open(link);
+  const handleLiClick = (id: number) => {
+    setIsStopTrue();
+    setCurrentState(id);
   };
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const Project = () => {
   useEffect(() => {
     const play = setInterval(() => {
       if (isStop) clearInterval(play);
-      else setCurrentState((current) => (current === 2 ? 1 : current + 1));
+      else setCurrentState((current) => (current === 4 ? 1 : current + 1));
     }, 10000);
     return () => clearInterval(play);
   }, [isStop]);
@@ -49,7 +50,7 @@ const Project = () => {
         <div className={style.auto_slider}>
           <Button
             using={"text"}
-            onClick={isStop ? setIsPlayFalse : setIsPlayTrue}
+            onClick={isStop ? setIsStopFalse : setIsStopTrue}
             text={isStop ? "▶" : "■"}
           />
           <progress id="progress" max={10} value={timer}>
@@ -65,7 +66,7 @@ const Project = () => {
                   ? `${style.list_item} ${style.selected}`
                   : `${style.list_item}`
               }
-              onClick={() => setCurrentState(item.id)}
+              onClick={() => handleLiClick(item.id)}
             >
               {item.id}. {item.name}
             </li>
@@ -73,12 +74,7 @@ const Project = () => {
         </ol>
       </div>
       {selectedData?.map((item) => (
-        <Section
-          key={item.id}
-          data={item}
-          handleLinkClick={() => handleLinkClick(item.link)}
-          handleGithubClick={() => handleLinkClick(item.github)}
-        />
+        <Section key={item.id} data={item} />
       ))}
     </div>
   );

@@ -1,26 +1,35 @@
 import Image from "next/image";
 import Button from "@components/Button";
-import { ProjectState } from "@@types/propsTypes";
+import { ProjectDataState } from "@@types/projectTypes";
 import style from "@styles/Project.module.sass";
 
-const Section = ({
-  data,
-  handleLinkClick,
-  handleGithubClick,
-}: ProjectState) => {
+const Section = ({ data }: { data: ProjectDataState }) => {
+  const handleLinkClick = (link: string) => {
+    window.open(link);
+  };
+
   return (
-    <div className={style.item}>
+    <section className={style.item} aria-labelledby={data.title}>
       <h3 className={style.title}>
         {data.name}
         <span>{data.title}</span>
+        <div className={style.link}>
+          <Button
+            using={"github"}
+            onClick={() => handleLinkClick(data.github)}
+          />
+          {data.link !== "" && (
+            <Button using={"link"} onClick={() => handleLinkClick(data.link)} />
+          )}
+        </div>
       </h3>
       <div className={style.content_box}>
         <div className={style.demo}>
           <Image
             src={data.imageSrc}
-            width={500}
-            height={300}
-            alt="project demo gif"
+            width={400}
+            height={500}
+            alt="프로젝트 UI화면의 일부를 보여줌"
           />
         </div>
         <div className={style.explain}>
@@ -30,13 +39,7 @@ const Section = ({
           <p>{data.dev}</p>
         </div>
       </div>
-      <div className={style.link}>
-        <Button using={"github"} onClick={handleGithubClick} />
-        {data.link !== "" && (
-          <Button using={"link"} onClick={handleLinkClick} />
-        )}
-      </div>
-    </div>
+    </section>
   );
 };
 
