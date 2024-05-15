@@ -1,0 +1,52 @@
+@use '../../styles/_variables'
+
+%badge
+    padding: 24px 64px
+    border: 1px solid variables.$black
+    line-height: 2.5rem
+    letter-spacing: -1px
+    box-shadow: 3px 3px 0px variables.$black
+    transition: 0.5s
+
+.stack_wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: 1600px
+    .item_flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        gap: 24px
+        width: 100%
+        max-width: 1200px
+        background: variables.$white
+        padding: 24px 0
+        border: 1px solid variables.$black
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #93f786 100%,)
+    .square
+        @extend %badge
+        font-size: 2rem
+        color: variables.$black
+        border-radius: 5px
+        background: linear-gradient(180deg, rgba(172,216,255,1) 0%, rgba(255,255,255,1) 100%)
+    .ribbon
+        background: #ff009d
+        color: #fff
+        padding: 24px
+        font-weight: 600
+        font-size: 1.8rem
+    .ribbon:nth-child(3n)
+        background: #ffbb00
+    .one
+        @extend %badge
+        background: variables.$white
+        font-size: 1.5rem
+        border-radius: 27% 73% 74% 26% / 39% 57% 43% 61%
+    .one:nth-child(2n)
+        border-radius: 60% 40% 24% 76% / 39% 57% 43% 61%
+    .one:hover
+        box-shadow: 5px 5px 0px variables.$black

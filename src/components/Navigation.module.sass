@@ -1,0 +1,32 @@
+@use '../styles/_variables'
+
+.navigation
+    top: 0
+    left: 0
+    width: 100vw
+    min-height: 100px
+    margin-bottom: 60px
+    .menu
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        width: 100%
+        max-width: 1600px
+        gap: 16px
+        margin-top: 16px
+        z-index: 1000
+        .menu_list
+            list-style: none
+            width: 100%
+            padding: 14px 32px
+            border: 1px solid variables.$black
+            background: #ffbbbb
+            background: linear-gradient(180deg, #ffbbbb 0%, rgba(255,255,255,1) 100%)
+            font-size: 1.4rem
+            text-align: center
+            letter-spacing: -0.28px
+            cursor: pointer
+            transition: 0.2s
+        .menu_list:hover
+            box-shadow: 4px 4px 0px variables.$black
