@@ -8,14 +8,11 @@ const Navigation = () => {
         <Link href={"/"}>
           <li className={style.menu_list}>HOME</li>
         </Link>
-        <Link href={"/project"}>
-          <li className={style.menu_list}>PROJECT</li>
-        </Link>
         <Link href={"/skill"}>
           <li className={style.menu_list}>SKILL</li>
         </Link>
-        <Link href={"/contact"}>
-          <li className={style.menu_list}>CONTACT</li>
+        <Link href={"/project"}>
+          <li className={style.menu_list}>PROJECT</li>
         </Link>
       </ul>
     </nav>

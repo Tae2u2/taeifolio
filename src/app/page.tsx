@@ -1,9 +1,10 @@
-import MyHome from "@/components/home/Home";
+import dynamic from "next/dynamic";
+const Contact = dynamic(() => import("@/components/contact/Contact"));
 
 export default function Home() {
   return (
     <main>
-      <MyHome />
+      <Contact />
     </main>
   );
 }

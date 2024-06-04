@@ -11,6 +11,9 @@ const pretendard = localfont({
 export const metadata: Metadata = {
   title: "TAEIFOLIO",
   description: "주니어 개발자 포트폴리오",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +26,7 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <Navigation />
         {children}
+        <small>©taeifolio</small>
       </body>
     </html>
   );

@@ -10,11 +10,8 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
-    "@types/node": "18.16.0",
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5",
     "next": "^14.2.3",
     "notion-client": "^6.16.0",
     "react": "^18.3.1",
@@ -23,6 +20,11 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/node": "18.16.0",
+    "@types/react": "18.0.38",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2"
   }
