@@ -6,47 +6,72 @@
     justify-content: $justify
     align-items: $items
 
-.project_wrapper
-    @include display-items(row, flex-start, flex-start)
+.edu_title
     width: 100%
-    max-width: 1200px
-    height: fit-content
-    gap: 36px
-    .list_box
-        @include display-items(column, center, center)
-        width: fit-content
-        .auto_slider
-            @include display-items(row, flex-start, center)
-            p
-                letter-spacing: -2px
-                line-height: 1rem
-        ol
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            .list_item
-                list-style: none
-                min-width: fit-content
-                padding: 16px 16px
-                margin: 16px
-                border-radius: 10px
-                border: 1px solid variables.$black
-                background-color: variables.$white
-                color: variables.$black
-                letter-spacing: -0.5px
-                font-size: 1rem
-                box-shadow: 4px 4px 0px variables.$black
-                cursor: pointer
-                transition: 0.4s
-            .list_item:hover
-                background: rgb(172,216,255)
-                background: linear-gradient(180deg, rgba(172,216,255,1) 0%, rgba(255,255,255,1) 100%)
-            .selected
-                background: rgb(172,216,255)
-                background: linear-gradient(180deg, rgba(172,216,255,1) 0%, rgba(255,255,255,1) 100%)
+    text-align: center
+    font-size: 2rem
+    letter-spacing: 12px
+    color: #0a2d77fa
+    text-shadow: -2px 0px pink, 0px 1px yellow, 2px 0px pink, 0px -1px yellow
+
+.edu_list
+    padding: 24px 60px 24px 16px
+    margin: 16px 0 90px 0
+    border-radius: 10px
+    letter-spacing: -0.5px
+    font-size: 1rem
+    box-shadow: 4px 4px 0px #69a4d8
+    background: linear-gradient(180deg, #fff 0%, rgba(172,216,255,1) 100%)
+    .edu_item
+        list-style: none
+        width: 100%
+        margin: 12px
+        border-radius: 10px
+        border: 1px solid variables.$black
+        background-color: variables.$white
+        color: variables.$black
+        letter-spacing: -0.5px
+        font-size: 1rem
+        box-shadow: 4px 4px 0px variables.$black
+        a
+            display: block
+            width: 100%
+            padding: 12px
+            line-height: 28px
+            span
+                margin-right: 4px
+                padding: 4px 10px
+                border-radius: 5px
+                font-size: 0.8rem
+                background: #ffbebee1
+                color: #812020
+                &:nth-child(2)
+                    background: #bef5ffe1
+                    color: #1d5786
+                &:nth-child(3)
+                    background: #e1ffbee1
+                    color: #1c531a
+
+.list_item
+    list-style: none
+    margin: 24px 0
+    padding-bottom: 16px
+    span
+        padding: 16px 16px
+        margin: 16px
+        border-radius: 10px
+        border: 1px solid variables.$black
+        background-color: variables.$white
+        color: variables.$black
+        letter-spacing: -0.5px
+        font-size: 1rem
+        box-shadow: 4px 4px 0px variables.$black
+        cursor: pointer
+        transition: 0.4s
     .item
         @include display-items(column, center, center)
-        width: 90%
+        width: 100%
+        max-width: 400px
         height: fit-content
         margin-bottom: 24px
         border-radius: 5px
@@ -68,42 +93,49 @@
             font-weight: 300
             letter-spacing: -0.5px
             line-height: 2.5rem
-            span
+            small
                 padding-left: 16px
                 font-size: 1rem
         .content_box
-            @include display-items(column,center,flex-start)
+            @include display-items(column,center,flex-end)
             width: 100%
             background-color: variables.$white
-            .demo
-                @include display-items($direction:column)
-                width: fit-content
+            p
                 width: 100%
-                height: 50%
-                border-bottom: 1px solid variables.$black
-                overflow: hidden
-            .explain
-                width: 100%
-                height: 50%
-                p
-                    padding-left: 16px
-                    padding-right: 16px
-                    padding-bottom: 8px
-                    margin-top: 16px
-                    border-bottom: 1px solid variables.$black
-                    letter-spacing: -0.5px
-                    font-size: 1rem
-                    line-height: 1.8rem
-                    box-shadow: 0px 2px 2px #bdbdbd
-                .dev_title
-                    padding-left: 16px
-                    margin-top: 16px
-                    border-bottom: none
-                    font-weight: 400
-
+                text-align: left
+                padding: 8px 16px
+                margin-top: 16px
+                letter-spacing: -0.2px
+                font-size: 1rem
+                line-height: 28px
         .link
-            @include display-items(row, flex-end, center)
-            width: 100%
-            height: 10%
-            button
-                margin: 8px
+            @include display-items(row,center,center)
+            width: 47px
+            height: 47px
+            padding: 10px
+            margin: 16px
+            border: 1px solid variables.$black
+            background-color: variables.$white
+            color: variables.$black
+            cursor: pointer
+
+.detail_container
+    @include display-items(column ,center,flex-end)
+    width: 100%
+    max-width: 860px
+    margin-bottom: 120px
+    .notion_link
+        padding: 16px
+        margin-bottom: 20px
+        text-align: center
+        background: #fff
+        border: 1px solid #000
+        box-shadow: -4px -4px 0px #000
+        p
+            line-height: 20px
+            color: orangered
+    .text_wrapper
+        margin-top: 20px
+        padding: 40px
+        background: #fff
+        line-height: 28px
