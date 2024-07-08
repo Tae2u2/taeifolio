@@ -4,6 +4,8 @@ import data from "./data/data.json";
 import Badge from "./Badge";
 
 import style from "./Stack.module.sass";
+import { useIntersection } from "@/hooks/useIntersection";
+import { useRef } from "react";
 
 export interface BadgeState {
   name: string;
@@ -12,6 +14,8 @@ export interface BadgeState {
 
 const Stack = () => {
   const stackList: BadgeState[] = data;
+  const targetRef = useRef(null);
+  const { isVisible } = useIntersection(targetRef);
 
   return (
     <div className={style.stack_wrapper}>
@@ -23,9 +27,14 @@ const Stack = () => {
           공식문서에서 제공하는 기본 코드 이상을 활용한 적이 있는 기술들 입니다.
         </p>
       </div>
-      <div className={style.item_flex}>
+      <div
+        ref={targetRef}
+        className={
+          isVisible ? `${style.show} ${style.item_flex}` : style.item_flex
+        }
+      >
         {stackList.map((item) => (
-          <Badge key={item.name} shape={item.shape} name={item.name} />
+          <Badge key={item.name} item={item} />
         ))}
       </div>
     </div>

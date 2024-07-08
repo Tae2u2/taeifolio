@@ -6,6 +6,10 @@
     justify-content: $justify
     align-items: $items
 
+.project_container
+    width: 100%
+    max-width: 1000px
+
 .edu_title
     width: 100%
     text-align: center
@@ -38,6 +42,7 @@
             width: 100%
             padding: 12px
             line-height: 28px
+            cursor: pointer
             span
                 margin-right: 4px
                 padding: 4px 10px
@@ -52,6 +57,20 @@
                     background: #e1ffbee1
                     color: #1c531a
 
+.project_list
+    @include display-items(row, center, flex-start)
+    flex-wrap: wrap
+    gap: 32px
+    position: relative
+    height: fit-content
+    padding: 24px 60px 24px 16px
+    margin: 16px 0 90px 0
+    border-radius: 10px
+    letter-spacing: -0.5px
+    font-size: 1rem
+    box-shadow: 4px 4px 0px #69a4d8
+    background: linear-gradient(180deg, #fff 0%, rgba(172,216,255,1) 100%)
+    overflow: hidden
 .list_item
     list-style: none
     margin: 24px 0
@@ -69,11 +88,10 @@
         cursor: pointer
         transition: 0.4s
     .item
-        @include display-items(column, center, center)
-        width: 100%
-        max-width: 400px
+        @include display-items(column, flex-start, flex-start)
+        width: 400px
         height: fit-content
-        margin-bottom: 24px
+        margin-bottom: 10px
         border-radius: 5px
         border: 1px solid variables.$black
         background-color: variables.$white
@@ -81,12 +99,10 @@
         .title
             @include display-items(column, center, flex-start)
             width: 100%
-            padding: 12px 0px 10px 16px
+            padding: 24px 16px
             background: rgb(172,216,255)
             background: linear-gradient(180deg, rgba(172,216,255,1) 0%, rgba(255,255,255,1) 100%)
-            border-bottom: 1px solid variables.$black
             border-top-left-radius: 5px
-            border-top-right-radius: 5px
             color: variables.$black
             text-align: left
             font-size: 2rem
@@ -100,11 +116,10 @@
             @include display-items(column,center,flex-end)
             width: 100%
             background-color: variables.$white
+            padding: 24px 16px
             p
                 width: 100%
                 text-align: left
-                padding: 8px 16px
-                margin-top: 16px
                 letter-spacing: -0.2px
                 font-size: 1rem
                 line-height: 28px
@@ -113,7 +128,6 @@
             width: 47px
             height: 47px
             padding: 10px
-            margin: 16px
             border: 1px solid variables.$black
             background-color: variables.$white
             color: variables.$black

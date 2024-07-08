@@ -1,7 +1,7 @@
 import { ProjectDataState } from "@/types/projectTypes";
 import style from "./Project.module.sass";
 import Link from "next/link";
-import { TfiGithub } from "react-icons/tfi";
+import { TfiLink } from "react-icons/tfi";
 
 const Section = ({ data }: { data: ProjectDataState }) => {
   return (
@@ -18,9 +18,11 @@ const Section = ({ data }: { data: ProjectDataState }) => {
           <br />
           {data.explain}
         </p>
-        <Link href={data.github} target="_blank" className={style.link}>
-          <TfiGithub />
-        </Link>
+        {data.Link !== "" && (
+          <Link href={data.Link} target="_blank" className={style.link}>
+            <TfiLink />
+          </Link>
+        )}
       </div>
     </section>
   );

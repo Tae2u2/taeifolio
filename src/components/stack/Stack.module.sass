@@ -11,10 +11,21 @@
 .stack_wrapper
     display: flex
     flex-wrap: wrap
+    flex-direction: column
     justify-content: center
     align-items: center
     width: 100%
     max-width: 1200px
+    margin: 240px 0
+    gap: 80px
+    .title
+        padding: 14px 32px
+        border: 1px solid variables.$black
+        background: #ffbbbb
+        background: linear-gradient(180deg, #ffbbbb 0%, rgba(255,255,255,1) 100%)
+        font-size: 3rem
+        text-align: center
+        letter-spacing: -0.28px
     .item_flex
         display: flex
         flex-wrap: wrap
@@ -25,7 +36,6 @@
         max-width: 1200px
         background: variables.$white
         padding: 24px 0
-        margin: 80px 0
         border: 1px solid variables.$black
         background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #93f786 100%,)
     .square
@@ -51,7 +61,41 @@
         border-radius: 60% 40% 24% 76% / 39% 57% 43% 61%
     .one:hover
         box-shadow: 5px 5px 0px variables.$black
+    .show
+        .ribbon
+            animation: moving 0.4s ease-in infinite alternate
+        .ribbon:hover
+            animation: none
+            transform: scale(1.2)
+            z-index: 100
+        .square
+            animation: moving-reverse 0.4s ease-in infinite alternate
+        .square:hover
+            animation: none
+            transform: scale(1.2)
+            z-index: 100
+        .one
+            animation: moving 0.4s ease-in infinite alternate
+        .one:hover
+            animation: none
+            transform: scale(1.2)
+            z-index: 100
 
+@keyframes moving
+    0%
+        transform: rotate(2deg)
+    50%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-2deg)
+
+@keyframes moving-reverse
+    0%
+        transform: rotate(-2deg)
+    50%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(2deg)
 .greet_card
     width: 100%
     max-width: 400px

@@ -13,11 +13,9 @@ const ProjectPage = () => {
   };
 
   return (
-    <div>
+    <div className={style.project_container}>
       <h1 className={style.edu_title}>프로젝트 및 학습내역</h1>
-      <ul className={style.edu_list}>
-        <Project />
-      </ul>
+      <Project />
       <ul className={style.edu_list}>
         {/**@ts-ignore */}
         {getItemList().then((result) =>

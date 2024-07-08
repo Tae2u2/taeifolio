@@ -6,5 +6,5 @@ export interface ProjectDataState {
   explain: string;
   period: string;
   dev: string;
-  github: string;
+  Link: string;
 }

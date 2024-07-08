@@ -1,30 +1,57 @@
 [{
     "id":1,
+    "name": "[경력] 체크타임",
+    "title" : "건강검진 예약 플랫폼",
+    "imageSrc" : "/pigOnTrip.png",
+    "explain" : "예약 CRUD, 게시판, 반응형 퍼블리싱, 카카오맵",
+    "period" : "2023.08 ~ 2023.10",
+    "dev" : "NextJS Emotion axios react-query",
+    "Link" : "https://checktime.co.kr/"
+},{
+    "id":2,
+    "name": "[경력]캐스팅엔모델",
+    "title" : "모델 캐스팅 관리 웹 서비스",
+    "imageSrc" : "/pigOnTrip.png",
+    "explain" : "마이페이지, 문의, 타겟페이지 퍼블리싱, 리팩토링",
+    "period" : "2023.12 ~ 2024.03",
+    "dev" : "NextJS TypeScript Mui axios react-query react-hook-form",
+    "Link" : "https://castingnmodel.com/"
+},{
+    "id":3,
+    "name": "[경력]링켄리브",
+    "title" : "여행 상품 예약 서비스",
+    "imageSrc" : "/pigOnTrip.png",
+    "explain" : "예약 CRUD, 상품 CRUD, 검색, 마이페이지, API로그인(네이버, 카카오, 구글), SNS공유(페이스북, 트위터, 블로그)",
+    "period" : "2023.07",
+    "dev" : "NextJS TypeScript TailwindCSS Git-actions",
+    "Link" : ""
+},{
+    "id":4,
+    "name": "[경력]소액트",
+    "title" : "투자 정보 제공 어플",
+    "imageSrc" : "/pigOnTrip.png",
+    "explain" : "웹뷰 게시판, GA4 적용",
+    "period" : "2023.07",
+    "dev" : "NextJS TypeScript TailwindCSS Git-actions",
+    "Link" : ""
+},{
+    "id":5,
     "name": "돼지는 여행 중",
     "title" : "해외여행 중 사용한 식비를 기록하는 서비스",
     "imageSrc" : "/pigOnTrip.png",
     "explain" : "환율api 적용, \n localstorage이용 CRUD 구현",
     "period" : "2023.07",
     "dev" : "NextJS TypeScript TailwindCSS Git-actions",
-    "github" : "https://github.com/roeehql/pigONtrip"
+    "Link" : "https://github.com/roeehql/pigONtrip"
 },
 {
-    "id":2,
+    "id":6,
     "name": "애견미용 예약 서비스",
     "title" : "애견 미용 예약 서비스입니다.",
     "imageSrc" : "/petSalonBooking.png",
     "explain" :"예약 CRUD, 검색, 목업 데이터 및 서버 적용",
     "period" : "2023.06",
     "dev" : "React TypeScript TailwindCSS ",
-    "github" : "https://github.com/roeehql/petSalonBooking"
-},{
-    "id":3,
-    "name": "애견미용 예약 서비스(admin)",
-    "title" : "매장용 애견 미용 예약 서비스입니다.",
-    "imageSrc" : "/petSalonAdmin.png",
-    "explain" :"예약 조회 및 예약승인 조건별 조회",
-    "period" : "2023.06",
-    "dev" : "NextJS TypeScript TailwindCSS",
-    "github" : "https://github.com/roeehql/petSalonAdmin"
+    "Link" : "https://github.com/roeehql/petSalonBooking"
 }
 ]
