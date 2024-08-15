@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className={style.contact_box}>
       <div className={style.top_part}>
-        <Link href={"https://github.com/roeehql"} target={"_blank"}>
+        <Link href={"https://github.com/Tae2u2"} target={"_blank"}>
           <TfiGithub />
         </Link>
         <Link
@@ -20,14 +20,6 @@ const Contact = () => {
         </Link>
       </div>
       <div className={style.info}>
-        <Image
-          src={"/tae_i.jpg"}
-          className={style.photo}
-          width={200}
-          height={200}
-          alt=""
-          priority
-        />
         <p className={style.greeting}>
           💜안녕하세요 !!
           <br />
@@ -40,7 +32,7 @@ const Contact = () => {
         </p>
 
         <address>
-          <p className={style.myInfo}>roeehql@naver.com</p>
+          <p className={style.myInfo}>tae2u20729@gmail.com</p>
         </address>
       </div>
     </div>
