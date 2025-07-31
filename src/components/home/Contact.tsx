@@ -10,14 +10,6 @@ const Contact = () => {
         <Link href={"https://github.com/Tae2u2"} target={"_blank"}>
           <TfiGithub />
         </Link>
-        <Link
-          href={
-            "https://tae2u2.notion.site/08317161fe4c4767b6001683268af948?pvs=4"
-          }
-          target="_blank"
-        >
-          Notion
-        </Link>
       </div>
       <div className={style.info}>
         <p className={style.greeting}>
@@ -26,13 +18,15 @@ const Contact = () => {
           💙프론트엔드 개발자 강태이입니다. <br />
           💛NextJS, React를 다루고 있습니다.
           <br />
-          🩷UI/UX에 관심을 두고 있고,
+          🩷UI/UX에 우선순위를 두고 있고,
           <br />
           💚새로운 기술을 탐색하는 것을 좋아합니다.
         </p>
 
         <address>
-          <p className={style.myInfo}>tae2u20729@gmail.com</p>
+          <p className={style.myInfo}>010-9349-0913</p>
+
+          <p className={style.myInfo}>kangnimell@gmail.com</p>
         </address>
       </div>
     </div>

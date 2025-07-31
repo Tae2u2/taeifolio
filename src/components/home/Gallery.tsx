@@ -33,9 +33,6 @@ const Gallery = () => {
             key={item.id}
             className={style.item}
             ref={(el) => (itemRef.current[item.id] = el)}
-            style={{
-              backgroundImage: `url(/slide/slide_${item.id}.jpg);`,
-            }}
           >
             <div className={style.content}>
               <div className={style.name}>{item.title}</div>

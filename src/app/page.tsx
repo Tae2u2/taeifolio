@@ -10,7 +10,6 @@ export default function Home() {
       <Contact />
       <Gallery />
       <Stack />
-      <AutoSlide />
     </main>
   );
 }

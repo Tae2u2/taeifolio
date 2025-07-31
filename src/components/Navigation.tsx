@@ -11,6 +11,9 @@ const Navigation = () => {
         <Link href={"/project"}>
           <li className={style.menu_list}>PROJECT</li>
         </Link>
+        <Link href={"/thanku"}>
+          <li className={style.menu_list}>Thank U</li>
+        </Link>
       </ul>
     </nav>
   );

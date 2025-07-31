@@ -7,23 +7,24 @@ import style from "@/components/projects/Project.module.sass";
 const Project = dynamic(() => import("@/components/projects/Project"));
 
 const ProjectPage = () => {
-  const getItemList = async () => {
-    "use server";
-    return await getList();
-  };
+  // const getItemList = async () => {
+  //   "use server";
+  //   return await getList();
+  // };
 
   return (
     <div className={style.project_container}>
-      <h1 className={style.edu_title}>프로젝트 및 학습내역</h1>
-      <Project />
+      <h1 className={style.edu_title}>기록</h1>
       <ul className={style.edu_list}>
-        {/**@ts-ignore */}
+        {/* *@ts-ignore
         {getItemList().then((result) =>
           result.map((item) => {
             return <ListItem key={item.id} item={item} />;
           })
-        )}
+        )} */}
       </ul>
+      <h1 className={style.edu_title}>프로젝트 경험</h1>
+      <Project />
     </div>
   );
 };
