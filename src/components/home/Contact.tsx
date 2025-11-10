@@ -1,12 +1,15 @@
 import Image from "next/image";
 import style from "./Contact.module.sass";
 import Link from "next/link";
-import { TfiGithub } from "react-icons/tfi";
+import { TfiGithub, TfiNotepad } from "react-icons/tfi";
 
 const Contact = () => {
   return (
     <div className={style.contact_box}>
       <div className={style.top_part}>
+        <Link href={"https://velog.io/@bubble0912/posts"} target={"_blank"}>
+          <TfiNotepad />
+        </Link>
         <Link href={"https://github.com/Tae2u2"} target={"_blank"}>
           <TfiGithub />
         </Link>
