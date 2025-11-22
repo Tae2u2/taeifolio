@@ -9,6 +9,7 @@
 .project_container
     width: 100%
     max-width: 1000px
+    margin: 100px 0
 
 .edu_title
     width: 100%
@@ -58,13 +59,13 @@
                     color: #1c531a
 
 .project_list
-    @include display-items(row, center, flex-start)
+    @include display-items(row, flex-start, flex-start)
     flex-wrap: wrap
-    gap: 32px
+    gap: 50px
     position: relative
     height: fit-content
     padding: 24px 60px 24px 16px
-    margin: 16px 0 90px 0
+    margin: 16px 0 32px 0
     border-radius: 10px
     letter-spacing: -0.5px
     font-size: 1rem
@@ -73,11 +74,10 @@
     overflow: hidden
 .list_item
     list-style: none
-    margin: 24px 0
     padding-bottom: 16px
-    span
-        padding: 16px 16px
-        margin: 16px
+    transition: all ease 0.3s
+    .title_btn
+        padding: 8px 16px
         border-radius: 10px
         border: 1px solid variables.$black
         background-color: variables.$white
@@ -132,6 +132,19 @@
             background-color: variables.$white
             color: variables.$black
             cursor: pointer
+.img_item
+    border-radius: 5px
+    border: 1px solid variables.$black
+    background-color: variables.$white
+    box-shadow: 3px 3px 0px variables.$black
+    .img_box
+        width:400px
+        height:400px
+        overflow-y: scroll
+        overflow-x: hidden
+        img
+            width:100%
+            height:auto
 
 .detail_container
     @include display-items(column ,center,flex-end)

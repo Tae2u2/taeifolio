@@ -5,13 +5,13 @@ const Navigation = () => {
   return (
     <nav className={style.navigation}>
       <ul className={style.menu}>
-        <Link href={"/"}>
+        <Link href={"#main-zone"}>
           <li className={style.menu_list}>HOME</li>
         </Link>
-        <Link href={"/project"}>
+        <Link href={"#project-zone"}>
           <li className={style.menu_list}>PROJECT</li>
         </Link>
-        <Link href={"/thanku"}>
+        <Link href={"#thank-zone"}>
           <li className={style.menu_list}>Thank U</li>
         </Link>
       </ul>

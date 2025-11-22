@@ -5,7 +5,7 @@ import style from "./AutoSlide.module.css";
 const AutoSlide = () => {
   const slideLength = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <div className={style.banner}>
+    <div id="thank-zone" className={style.banner}>
       <div
         className={style.slider}
         style={{ "--quantity": 10 } as CSSProperties}

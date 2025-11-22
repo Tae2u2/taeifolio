@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./global.css";
 import localfont from "next/font/local";
 import Navigation from "@/components/Navigation";
-import ObjectCanvas from "@/components/home/ObjectCanvas";
 
 const pretendard = localfont({
   src: "../styles/PretendardVariable.woff2",
@@ -27,7 +26,6 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <Navigation />
         {children}
-        <ObjectCanvas />
         <small>©taeifolio</small>
       </body>
     </html>

@@ -6,4 +6,5 @@ export interface ProjectDataState {
   period: string;
   dev: string;
   Link: string;
+  img?: string;
 }

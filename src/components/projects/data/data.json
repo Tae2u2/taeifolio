@@ -1,38 +1,58 @@
 [
   {
-    "id": 3,
-    "name": "스마일코리아 홈페이지",
-    "title": "정적 홈페이지",
-    "explain": "반응형과 모션을 적용한 자사 홈페이지",
-    "period": "2025.04",
-    "dev": "NextJS TailwindCSS Swiper ChartJS Framer",
-    "Link": " https://www.smilekoreacorp.com/"
-  },
-  {
-    "id": 3,
-    "name": "링켄리브",
-    "title": "여행 상품 예약 서비스",
-    "explain": "예약 CRUD, 상품 CRUD, 검색, 마이페이지, API로그인(네이버, 카카오, 구글), SNS공유(페이스북, 트위터, 블로그)",
-    "period": "2023.11, 2024.02",
-    "dev": "NextJS TypeScript TailwindCSS Git-actions",
-    "Link": "https://linkandleave.com/"
-  },
-  {
-    "id": 1,
-    "name": "체크타임",
-    "title": "건강검진 예약 플랫폼",
-    "explain": "예약 CRUD, 게시판, 반응형 퍼블리싱, 카카오맵",
-    "period": "2023.09 ~ 2023.10",
-    "dev": "NextJS Emotion axios react-query",
+    "id": 6,
+    "name": "광고영업 그룹웨어",
+    "title": "영업, 회계, HR 관리 그룹웨어",
+    "explain": "대시보드, 영업관리, 매출정산, HR 등 다양한 모듈 개발 및 유지보수",
+    "period": "2024.07 ~ 2025.08",
+    "dev": "React TypeScript Tanstack-query axios tailwindCSS Redux-Toolkit Vite",
     "Link": ""
   },
   {
+    "id": 5,
+    "name": "종근당 연하장",
+    "title": "모바일 화면 위주의 반응형 적용한 연하장 페이지",
+    "explain": "SNS 공유에 맞춘 meta태그 세팅 및 다수의 사용자 및 다양한 기기 및 플랫폼 환경에 대응할 수 있는 반응형 퍼블리싱",
+    "period": "2024.12",
+    "dev": "NextJS TailwindCSS",
+    "Link": ""
+  },
+  {
+    "id": 4,
+    "name": "스마일코리아 홈페이지",
+    "title": "반응형과 모션을 적용한 홈페이지, 레퍼런스를 참조한 프로토타입을 제작해 선개발 후수정 협업 방식으로 진행",
+    "explain": "FE 100% 구현 및 유지보수",
+    "period": "2025.04",
+    "dev": "NextJS TailwindCSS Swiper ChartJS Framer",
+    "Link": " https://www.smilekoreacorp.com/",
+    "img": "/project/smilekorea.png"
+  },
+  {
+    "id": 3,
+    "name": "링켄리브 (여행상품)",
+    "title": "여행 상품 예약 판매 플랫폼",
+    "explain": "상품 CRUD, 검색, 성향Test, 예약 CRUD, API로그인(네이버, 카카오, 구글), SNS공유(페이스북, 트위터, 블로그)",
+    "period": "2023.11, 2024.02",
+    "dev": "NextJS SCSS Axios React-query Recoil",
+    "Link": "https://linkandleave.com/",
+    "img": "/project/linknleave.png"
+  },
+  {
     "id": 2,
-    "name": "캐스팅엔모델",
+    "name": "캐스팅엔모델 (엔터테인먼트)",
     "title": "모델 캐스팅 관리 웹 서비스",
-    "explain": "마이페이지, 문의, 타겟페이지 퍼블리싱, 리팩토링",
+    "explain": "SSR hydration 에러 해결, 타겟페이지 퍼블리싱, 리팩토링",
     "period": "2023.12 ~ 2024.03",
-    "dev": "NextJS TypeScript Mui axios react-query react-hook-form",
+    "dev": "NextJS TypeScript Mui Axios React-query React-hook-form",
+    "Link": ""
+  },
+  {
+    "id": 1,
+    "name": "체크타임(의료 검진)",
+    "title": "건강검진 예약 플랫폼",
+    "explain": "반응형 퍼블리싱, 카카오맵, 게시판 CRUD",
+    "period": "2023.09 ~ 2023.10",
+    "dev": "NextJS Emotion Axios React-query Recoil",
     "Link": ""
   }
 ]
