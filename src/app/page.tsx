@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import Stack from "@/components/stack/Stack";
 import style from "@/components/projects/Project.module.sass";
+import NotionList from "@/components/projects/ListItem";
+import SideProject from "@/components/projects/SideProject";
 
 const Contact = dynamic(() => import("@/components/home/Contact"));
 const Project = dynamic(() => import("@/components/projects/Project"));
@@ -15,6 +17,8 @@ export default function Home() {
         <h1 className={style.edu_title}>PROJECT</h1>
         <Project />
       </div>
+      <SideProject />
+      <NotionList />
       <AutoSlide />
     </main>
   );

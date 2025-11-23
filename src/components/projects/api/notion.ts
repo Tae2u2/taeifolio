@@ -8,15 +8,18 @@ const notion = new Client({
   auth: process.env.MY_NOTION_API_KEY,
 });
 
-export const getRenderPage = async (pageId:string) => {
-  const notionApi = new NotionAPI()
-  const response = await notionApi.getPage(pageId)
-  return response
-}
+export const getRenderPage = async (pageId: string) => {
+  const notionApi = new NotionAPI();
+  const response = await notionApi.getPage(pageId);
+  return response;
+};
 
-  export const getList = async () => {
-      const response = await notion.databases.query({
-        database_id: `${process.env.MY_NOTION_DATABASE_ID}` || '',
-      });
-      return response.results;
-  }
+const databaseId = process.env.MY_NOTION_DATABASE_ID;
+if (!databaseId) throw new Error("Missing Notion database ID");
+
+export const getList = async () => {
+  const response = await notion.databases.query({
+    database_id: databaseId,
+  });
+  return response.results;
+};
