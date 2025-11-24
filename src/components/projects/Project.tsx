@@ -8,7 +8,7 @@ import { CSSProperties } from "react";
 
 import Image from "next/image";
 
-const ProjectLi = ({ item }: { item: ProjectDataState }) => {
+export const ProjectLi = ({ item }: { item: ProjectDataState }) => {
   return (
     <li
       key={item.id}

@@ -29,11 +29,7 @@ const Gallery = () => {
     <div className={style.container}>
       <div className={style.slide} ref={slideRef}>
         {slideData.map((item) => (
-          <div
-            key={item.id}
-            className={style.item}
-            ref={(el) => (itemRef.current[item.id] = el)}
-          >
+          <div key={item.id} className={style.item}>
             <div className={style.content}>
               <div className={style.name}>{item.title}</div>
               <div className={style.des}>{item.text}</div>
